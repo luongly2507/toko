@@ -39,6 +39,7 @@
     <color name="md_theme_light_surfaceTint">#00629E</color>
     <color name="md_theme_light_outlineVariant">#C2C7CF</color>
     <color name="md_theme_light_scrim">#000000</color>
+    <color name="md_theme_dark_onSurface">#E2E2E5</color>
 
     <color name="editTextBackground">#000000</color>
     <color name="tv_orange">#FF5722</color>
