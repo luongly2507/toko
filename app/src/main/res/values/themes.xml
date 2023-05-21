@@ -30,4 +30,10 @@
         <item name="android:windowDrawsSystemBarBackgrounds">false</item>
     </style>
     <style name="BookDetailTheme" parent="Theme.Material3.Light"></style>
+    <style name="InStockSpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/selector_book_search_activity_in_stock_spinner</item>
+    </style>
+    <style name="SaleSpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/selector_book_search_activity_in_stock_spinner</item>
+    </style>
 </resources>
