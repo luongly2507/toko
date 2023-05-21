@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".views.Cart.CartActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_cart"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        android:layout_alignParentTop="true"
+        android:minHeight="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giỏ hàng"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#03A9F4"
+            android:layout_gravity="center|center_vertical"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/back_cart"
+            android:src="@drawable/btn_arrow_circle_left_normal"
+            android:background="@android:color/transparent"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="8dp"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/delete_cart"
+            android:src="@drawable/btn_delete_normal"
+            android:background="@android:color/transparent"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="8dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card_bill"
+        android:layout_below="@+id/toolbar_cart"
+        android:layout_centerInParent="true"
+        android:layout_marginVertical="0dp"
+        android:fitsSystemWindows="true">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/card_bill"
+        android:layout_above="@id/checkout_cart"
+        android:layout_marginVertical="12dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="17dp"
+        android:background="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#0288D1"
+                android:id="@+id/total_cart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginVertical="10dp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/expand_cart"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/btn_expand_more"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/total_price_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="325.000 đồng"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/expand_cart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginVertical="10dp"
+                android:layout_marginEnd="5dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkout_cart"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="85dp"
+        android:layout_marginHorizontal="80dp">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/imagebtn_check_out"
+            android:background="@drawable/btn_check_out"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Out"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor= "#0288D1"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+</RelativeLayout>

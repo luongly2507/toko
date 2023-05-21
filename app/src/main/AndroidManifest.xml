@@ -16,6 +16,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".views.Cart.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Cart.VoucherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Cart.PaymentMethodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Cart.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Cart.CartActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.MainActivity"
             android:exported="true"
             android:label="@string/app_name">
@@ -26,4 +41,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:layout_marginTop="50dp"
+    android:id="@+id/bottom_sheet_cart">
+
+    <ImageButton
+        android:id="@+id/close_bottom_sheet_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/offer_cart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/offer_cart"
+        android:layout_marginEnd="8dp"
+        android:layout_marginVertical="5dp"
+        android:src="@drawable/btn_close"
+        android:background="@android:color/transparent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/offer_cart"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@id/cardview_order_sumary_cart"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="17dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/voucher_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voucher"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginVertical="7dp"/>
+
+            <TextView
+                android:id="@+id/add_voucher_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:hint="Nhập mã giảm giá"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/voucher_cart"
+                android:layout_marginEnd="20dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_order_sumary_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="17dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/order_sum_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đơn đặt hàng"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginVertical="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:id="@+id/view_line"
+                app:layout_constraintTop_toBottomOf="@id/order_sum_cart"
+                app:layout_constraintBottom_toTopOf="@id/order_cart"
+                android:layout_marginHorizontal= "20dp"
+                android:layout_marginBottom="7dp"/>
+
+            <TextView
+                android:id="@+id/order_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng trị giá"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/order_sum_cart"
+                android:layout_marginStart="30dp"
+                android:layout_marginVertical="50dp"/>
+
+            <TextView
+                android:id="@+id/delivery_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phí vận chuyển"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/order_cart"
+                android:layout_marginStart="30dp"
+                android:layout_marginVertical="50dp"/>
+
+            <TextView
+                android:id="@+id/discount_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mã giảm giá"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/delivery_cart"
+                android:layout_marginStart="30dp"
+                android:layout_marginVertical="50dp"/>
+
+            <View
+                android:id="@+id/view_line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/discount_cart"
+                app:layout_constraintBottom_toTopOf="@id/total_bottomsheet"
+                android:layout_marginHorizontal= "20dp"
+                android:layout_marginBottom="7dp"/>
+
+            <TextView
+                android:id="@+id/total_bottomsheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng tiền"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="textview_discount_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <TextView
+                android:id="@+id/order_price_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="325.000 đồng"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/order_cart"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:id="@+id/delivery_price_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.000 đồng"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/delivery_cart"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:id="@+id/discount_price_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.000 đồng"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/discount_cart"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:id="@+id/total_price_bottomsheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="325.000 đồng"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/total_bottomsheet"
+                android:layout_marginEnd="20dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
