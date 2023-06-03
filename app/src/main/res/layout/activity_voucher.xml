@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.Cart.VoucherActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:minHeight="0dp"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:fitsSystemWindows="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voucher"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="#0277BD"
+            android:layout_gravity="center|center_vertical"/>
+
+        <ImageButton
+            android:id="@+id/back_voucher"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/btn_arrow_circle_left_normal"
+            android:background="@android:color/transparent"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="8dp"/>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mã giảm giá"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginVertical="10dp" />
+
+    <EditText
+        android:id="@+id/ma_giam_gia_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Nhập mã giảm giá"
+        android:textStyle="italic"
+        android:background="#E1F5FE"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mã miễn phí vận chuyển"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginVertical="10dp"/>
+
+    <EditText
+        android:id="@+id/ma_mpvc_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Nhập mã miễn phí vận chuyển"
+        android:textStyle="italic"
+        android:background="#E1F5FE"/>
+
+    <Button
+        android:id="@+id/btn_ht_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hoàn thành"
+        android:layout_marginVertical="50dp"
+        android:textColor="#0277BD"
+        android:background="#03A9F4"/>
+
+
+</LinearLayout>

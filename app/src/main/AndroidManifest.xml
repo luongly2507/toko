@@ -16,6 +16,19 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".views.Cart.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Cart.VoucherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Cart.PaymentMethodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Cart.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.Cart.CartActivity"
             android:name=".views.BookSearchActivity"
             android:exported="true" >
             android:name=".views.RegisterActivity"

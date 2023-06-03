@@ -1,0 +1,11 @@
+New : Task hiện tại
+In Progress: Ai muốn làm task nào thì kéo vào để mọi người tránh làm task đó
+Làm xong thì kéo vào In Review
+
+Review xong thì đánh giá là Done
+
+
+
+cú pháp commit (xong tính năng mới commit):
+tên người commit - <tính năng đã hoàn thành>
+Ví dụ: luongly2507 - Add Dashboard Fragment

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.Cart.AddressActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:minHeight="0dp"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fitsSystemWindows="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đổi Địa Chỉ"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#0277BD"
+            android:layout_gravity="center|center_vertical"/>
+
+        <ImageButton
+            android:id="@+id/back_address"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/btn_arrow_circle_left_normal"
+            android:background="@android:color/transparent"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="8dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/lien_he_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Liên hệ"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_address"/>
+
+    <EditText
+        android:id="@+id/ho_ten_address"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Họ và tên"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/lien_he_address"
+        android:background="#E1F5FE"
+        android:layout_marginVertical="10dp"/>
+    <View
+        android:id="@+id/line_address1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#455A64"
+        app:layout_constraintTop_toBottomOf="@id/ho_ten_address"
+        app:layout_constraintBottom_toTopOf="@id/sdt_address"/>
+
+    <EditText
+        android:id="@+id/sdt_address"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Số điện thoại"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@+id/line_address1"
+        android:background="#E1F5FE"/>
+
+
+    <TextView
+        android:id="@+id/dia_chi_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintTop_toBottomOf="@id/sdt_address"/>
+
+    <EditText
+        android:id="@+id/tp_address"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Phường /Quận /Thành phố"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/dia_chi_address"
+        android:background="#E1F5FE"
+        android:layout_marginVertical="10dp"/>
+    <View
+        android:id="@+id/line_address2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#455A64"
+        app:layout_constraintTop_toBottomOf="@id/tp_address"
+        app:layout_constraintBottom_toTopOf="@id/so_nha_address"/>
+
+    <EditText
+        android:id="@+id/so_nha_address"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Số nhà/ Tên đường"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@+id/line_address2"
+        android:background="#E1F5FE"/>
+
+    <Button
+        android:id="@+id/btn_ht_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/so_nha_address"
+        android:text="Hoàn thành"
+        android:textColor="#0288D1"
+        android:background="#03A9F4"
+        android:layout_marginVertical="50dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
