@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    tools:context=".views.Cart.PaymentMethodActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:minHeight="0dp"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:fitsSystemWindows="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phương thức thanh toán"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="#0277BD"
+            android:layout_gravity="center|center_vertical"/>
+
+        <ImageButton
+            android:id="@+id/back_payment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/btn_arrow_circle_left_normal"
+            android:background="@android:color/transparent"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="8dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        app:cardElevation="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/ic_card_payment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_atm_card"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="15dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thẻ tín dụng/ Thẻ ghi nợ"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/ic_card_payment"
+                app:layout_constraintBottom_toBottomOf="@id/ic_card_payment"
+                app:layout_constraintStart_toEndOf="@id/ic_card_payment"
+                android:layout_marginStart="15dp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_expand_more"
+                android:background="@android:color/transparent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/ic_visa_payment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_visa"
+                app:layout_constraintTop_toBottomOf="@id/ic_card_payment"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginVertical="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saccombank xxxx85"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/ic_visa_payment"
+                app:layout_constraintBottom_toBottomOf="@id/ic_visa_payment"
+                app:layout_constraintStart_toEndOf="@id/ic_visa_payment"
+                android:layout_marginStart="15dp"/>
+
+
+
+            <ImageView
+                android:id="@+id/ic_mastercard_payment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_mastercard"
+                app:layout_constraintTop_toBottomOf="@id/ic_visa_payment"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginVertical="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saccombank xxxx85"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/ic_mastercard_payment"
+                app:layout_constraintBottom_toBottomOf="@id/ic_mastercard_payment"
+                app:layout_constraintStart_toEndOf="@id/ic_mastercard_payment"
+                android:layout_marginStart="15dp"/>
+
+            <View
+                android:id="@+id/line_payment"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CFC9C9"
+                app:layout_constraintTop_toBottomOf="@id/ic_mastercard_payment"
+                app:layout_constraintBottom_toTopOf="@id/ic_payment"/>
+
+
+            <ImageView
+                android:id="@+id/ic_payment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_cash"
+                app:layout_constraintTop_toBottomOf="@id/line_payment"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="15dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thanh toán khi nhận hàng"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/ic_payment"
+                app:layout_constraintBottom_toBottomOf="@id/ic_payment"
+                app:layout_constraintStart_toEndOf="@id/ic_payment"
+                android:layout_marginStart="15dp"/>
+
+            <RadioGroup
+                android:id="@+id/rg_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/rbt3_payment"
+                app:layout_constraintTop_toTopOf="@id/ic_visa_payment"
+                app:layout_constraintBottom_toBottomOf="@id/ic_payment"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="5dp">
+
+                <RadioButton
+                    android:id="@+id/rbt1_payment"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginVertical="7dp"
+                    android:checked="false"/>
+
+
+                <RadioButton
+                    android:id="@+id/rbt2_payment"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginVertical="7dp"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:id="@+id/rbt3_payment"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginVertical="7dp"
+                    android:checked="true"/>
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btn_ht_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hoàn thành"
+        android:textColor="#0277BD"
+        android:background="#03A9F4"
+        android:layout_marginVertical="50dp"/>
+
+
+</LinearLayout>
